@@ -31,7 +31,7 @@ npm run dev
 
 ### Deployment
 
- Use the contract in text file in folder "Contracts and tests/test" and use remix ide.
+ Use the contract in text file in folder "Contracts and tests/contract" and use remix ide.
 
 ### Running Tests
 
