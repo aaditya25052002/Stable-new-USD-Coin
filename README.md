@@ -1,34 +1,51 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# nUSD Stablecoin
+
+This project is a simple example of a Stablecoin pegged to USD, built on the Ethereum blockchain using Solidity. It leverages the Chainlink price feed to get the current price of Ethereum in USD.
+
+## Smart Contract: nUSD
+
+This smart contract creates a token called nUSD which is pegged to the USD. It includes functions to deposit ETH and mint nUSD in return, and to redeem nUSD and get back ETH. It also allows the admin of the contract to withdraw ETH.
+
+## Functions
+
+- `constructor`: Sets up the price feed and the admin of the contract.
+
+- `getLatestETHUSDPrice`: Gets the latest ETH/USD price from the Chainlink price feed.
+
+- `depositETH`: Allows a user to deposit ETH and mint nUSD in return. The amount of nUSD is determined by the current ETH/USD price.
+
+- `redeem`: Allows a user to redeem their nUSD and get back ETH. The amount of ETH is determined by the current ETH/USD price.
+
+- `withdrawETH`: Allows the admin of the contract to withdraw ETH from the contract.
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+- Install Node.js and npm. You can download them [here](https://nodejs.org/en/download/).
+
+```
+npm install 
+npm run dev 
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Deployment
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+ Use the contract in text file in folder "Contracts and tests/test" and use remix ide.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Running Tests
 
-## Learn More
+ use the txt file in the folder "Contracts and tests/test" and use remix ide to test the contract
 
-To learn more about Next.js, take a look at the following resources:
+## Contributing
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## License
 
-## Deploy on Vercel
+This project is licensed under the MIT License.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Acknowledgments
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- OpenZeppelin for the ERC20 contract.
+- Chainlink for the AggregatorV3Interface.

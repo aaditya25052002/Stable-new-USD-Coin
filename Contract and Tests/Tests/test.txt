@@ -1,0 +1,40 @@
+
+
+// UNcomment and check on remix ide
+
+// // SPDX-License-Identifier: MIT
+// pragma solidity ^0.8.0;
+
+// import "remix_tests.sol"; 
+// import "./nUSD.sol";
+
+// contract nUSDTest {
+//     nUSD nusd;
+//     address admin;
+
+//     function beforeAll() public {
+//         // Before running the tests, we deploy the contract.
+//         // You might need to replace the argument for the constructor depending on your setup.
+//         nusd = new nUSD(address(0)); // replace with your actual price feed contract address
+//         admin = msg.sender;
+//     }
+
+//     function checkInitialNameAndSymbol() public {
+//         Assert.equal(nusd.name(), "nUSD", "Name should be nUSD");
+//         Assert.equal(nusd.symbol(), "nUSD", "Symbol should be nUSD");
+//     }
+
+//     function checkAdmin() public {
+//         Assert.equal(nusd.admin(), admin, "Admin should be the one who deployed the contract");
+//     }
+
+//     /// #value: 1 ether
+//     function checkDepositETH() public payable {
+//         uint256 initialBalance = nusd.balanceOf(msg.sender);
+//         nusd.depositETH();
+//         uint256 finalBalance = nusd.balanceOf(msg.sender);
+//         Assert.isTrue(finalBalance > initialBalance, "finalBalance should be greater than initialBalance");
+//     }
+
+//     // Add more tests for redeem, withdrawETH and other functions
+// }
